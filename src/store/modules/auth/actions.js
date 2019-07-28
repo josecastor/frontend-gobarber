@@ -6,10 +6,16 @@ export function signInRequest(email, password) {
 }
 
 export function signInSuccess(token, user) {
-  console.tron.log(user);
   return {
     type: '@auth/SIGN_IN_SUCCESS',
     payload: { token, user },
+  };
+}
+
+export function signUpRequest(name, email, password) {
+  return {
+    type: '@auth/SIGN_UP_REQUEST',
+    payload: { name, email, password },
   };
 }
 
